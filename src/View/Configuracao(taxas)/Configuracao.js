@@ -36,6 +36,7 @@ const Configuracao = ({ navigation, routes }) => {
     }, [])
 
     const [precoDolar, setPrecoDolar] = useState(0);
+    const [markup, setMarkup] = useState(0);
     const [taxaGateway, setTaxaGateway] = useState(0);
     const [taxaLoja, setTaxaLoja] = useState(0);
     const [imposto, setImposto] = useState(0);
@@ -69,6 +70,7 @@ const Configuracao = ({ navigation, routes }) => {
                             setTaxaLoja(data.val().loja),
                             setImposto(data.val().Imposto),
                             setLucro(data.val().lucros)
+                            setMarkup(data.val().Markup)
                     }
                 });
             })
@@ -79,15 +81,16 @@ const Configuracao = ({ navigation, routes }) => {
         var loja = taxaLoja
         var Imposto = imposto
         var lucros = lucro
+        var Markup = markup
 
         if (estado == undefined) {
-            Crud().AtualizarObjeto('Taxas', '', { lucros, gateway, loja, Imposto })
+            Crud().AtualizarObjeto('Taxas', '', { lucros, gateway, loja, Imposto, Markup })
             navigation.reset({
                 routes: [{ name: 'tab' }]
             });
         } else {
             Plugin().alertas('Taxas atualizada com sucesso', '')
-            Crud().AtualizarObjeto('Taxas', '', { lucros, gateway, loja, Imposto })
+            Crud().AtualizarObjeto('Taxas', '', { lucros, gateway, loja, Imposto, Markup})
         }
     }
 
@@ -128,13 +131,12 @@ const Configuracao = ({ navigation, routes }) => {
 
                     <TextInput style={styles.formInput}
                         placeholder={'(%)'}
-                        // defaultValue={nomeProduto}
                         placeholderTextColor={'#bdbebd'}
                         underlineColorAndroid={'#D3D3D3'}
                         keyboardType={'number-pad'}
-                        value={taxaGateway.toString()}
+                        value={markup.toString()}
                         onChangeText={
-                            (nome) => setTaxaGateway(nome)
+                            (markup) => setMarkup(markup)
                         }
                     />
 

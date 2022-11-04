@@ -39,6 +39,7 @@ const Login = ({ navigation }) => {
                 store.update('user', {
                     idUser: data.user.uid
                 })
+                alert('logados')
                 navigation.dispatch(StackActions.push('loja_principal', { user: data.user.uid }))
             }).catch(function (error) {
                 setTimeout(function () {

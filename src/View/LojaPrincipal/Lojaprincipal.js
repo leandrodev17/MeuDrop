@@ -27,6 +27,7 @@ import IconMc from 'react-native-vector-icons/MaterialCommunityIcons'
 import IconFA5 from 'react-native-vector-icons/FontAwesome5'
 import IconI from 'react-native-vector-icons/Ionicons'
 
+import NetInfo from "@react-native-community/netinfo";
 import RNPickerSelect from 'react-native-picker-select';
 import styles from "./Estilo";
 import store from 'react-native-simple-store';

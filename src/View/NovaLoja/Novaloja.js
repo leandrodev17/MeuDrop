@@ -59,7 +59,7 @@ const NovaLoja = ({ navigation, routes }) => {
             />
 
             <TouchableOpacity style={estilomodal.btCadastrar} onPress={() => AdicinarLoja()} >
-                <Text style={estilomodal.textoBotao}>Adicinar</Text>
+                <Text style={estilomodal.textoBotao}>Adicionar</Text>
             </TouchableOpacity>
 
         </View>

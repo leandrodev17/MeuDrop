@@ -57,7 +57,8 @@ function Plugins() {
             'auth/user-not-found': 'Não há registro de usuário correspondente a este identificador. O usuário pode ter sido excluído.',
             'auth/wrong-password': 'A senha é inválida ou o usuário não possui uma senha.',
             'auth/invalid-email': 'O endereço de e-mail está formatado incorretamente.',
-            'auth/weak-password': 'A senha deve ter pelo menos 6 caracteres'
+            'auth/weak-password': 'A senha deve ter pelo menos 6 caracteres',
+            'auth/email-already-in-use':'O endereço de e-mail já está sendo usado por outra conta.rr'
         }
         alertas(codigos[codigo])
     }

@@ -59,6 +59,7 @@ const Add = ({ navigation }) => {
 
     const [precoDolar, setPrecoDolar] = useState(0);
     const [lucro, setLucro] = useState(0);
+    const [markup, setMarkup] = useState(0);
     const [total, setTotal] = useState(0);
 
     const [cpa, setCpa] = useState(0);
@@ -86,13 +87,13 @@ const Add = ({ navigation }) => {
 
 
                     listaTaxas(res.idLojaPrincipal, res.idUser)
-                    console.log(res.idLojaPrincipal, res.idUser);
+                    console.log(markup);
                     const referencia = Plugin().refereciasBancoDeDados('produtos', '', res.idLojaPrincipal, res.idUser)
 
                     referencia.on('value', (snap) => {
                         let items = [];
                         let nomeResumido
-                        let mkp = 2
+                        let mkp = markup;
                         let sugerido
                         let custo
                         let frete
@@ -103,7 +104,7 @@ const Add = ({ navigation }) => {
                             custo = child.val().ValorCusto
                             frete = child.val().ValorFrete
 
-                            sugerido = (custo + frete) * mkp
+                            sugerido = (custo * mkp) + frete
 
                             nomeResumido = child.val().nome
                             var fornecedorResumido = child.val().Fornecedor
@@ -263,6 +264,7 @@ const Add = ({ navigation }) => {
                 var total = Number(data.val().gateway) + Number(data.val().loja) + Number(data.val().Imposto) + Number(data.val().lucros)
 
                 setTotal(total / 100)
+                setMarkup(data.val().Markup)
                 setLucro(Number(data.val().lucros) / 100)
             }
         });

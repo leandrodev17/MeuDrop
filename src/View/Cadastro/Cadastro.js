@@ -57,7 +57,8 @@ const Cadastro = ({ navigation }) => {
                 }, 200);
                 var errorCode = error.code;
                 var errorMessage = error.message;
-
+                
+                console.log(error.code)
                 Plugin().mensagemDeErro(errorCode)
             })
         } else {

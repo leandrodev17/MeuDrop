@@ -65,9 +65,6 @@ const Routes = () => {
         await AdMobInterstitial.requestAd().then(() => AdMobInterstitial.showAd());
     }
 
-
-
-
     async function getCache() {
         try {
             NetInfo.fetch().then(state => {
@@ -115,12 +112,13 @@ const Routes = () => {
             break;
         case false:
             //Instruções executadas quando o resultado da expressão for igual á valor2
+            console.log(estadoNet);
             return (
                 <View style={{ justifyContent: 'center', flex: 1, backgroundColor: 'white' }}>
                     <StatusBar backgroundColor='#efecef' barStyle="dark-content" />
                     <Icon style={{ color: '#047454', alignSelf: 'center' }} name={"wifi-off"} size={90} />
                     <Text style={{ color: '#047454', marginTop: 12, textAlign: 'center', fontWeight: '600' }}>Infelizmente você esta sem internt!</Text>
-                    <Text style={{ color: '#54626b', textAlign: 'center', fontWeight: '600' }}>Procure se conectar para continuatar</Text>
+                    <Text style={{ color: '#54626b', textAlign: 'center', fontWeight: '600' }}>Procure se conectar para continuar</Text>
 
                     <TouchableOpacity onPress={() => { getCache() }}>
                     <Text style={{ color: '#047454', marginTop: 20, fontSize:25, textAlign: 'center', fontWeight: 'bold' }}>Recarregar</Text>
@@ -129,7 +127,7 @@ const Routes = () => {
             );
             break;
         case true:
-            
+            console.log(estadoNet);
             return (
                 <NavigationContainer>
                     <Stack.Navigator initialRouteName={estadoLogin}>
