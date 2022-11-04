@@ -2,9 +2,9 @@ import * as React from 'react';
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
 import Icon from 'react-native-vector-icons/Feather';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import Adicionar from '../View/Adicionar(produtos)/Adicionar'
-import taxas from '../View/Configuracao(taxas)/Configuracao'
-import perfil from '../View/Perfil/Perfil'
+import Adicionar from './Adicionar(produtos)/Adicionar'
+import taxas from './Configuracao(taxas)/Configuracao'
+import perfil from './Perfil/Perfil'
 
 
 const tab = () => {

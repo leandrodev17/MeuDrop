@@ -24,8 +24,8 @@ import IconFo from 'react-native-vector-icons/Fontisto'
 import styles from "./Estilo";
 import store from 'react-native-simple-store';
 import CurrencyInput from 'react-native-currency-input';
-import Plugin from '../../model/plugins';
-import Crud from '../../model/Crud';
+import Plugin from '../../controller/plugins';
+import Crud from '../../controller/Crud';
 
 
 const Configuracao = ({ navigation, routes }) => {

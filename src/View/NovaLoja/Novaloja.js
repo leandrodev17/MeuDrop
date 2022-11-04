@@ -1,27 +1,18 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import {
-    StyleSheet,
     Text,
     View,
     TextInput,
     TouchableOpacity,
-    Image,
-    Dimensions,
-    ScrollView,
-    Keyboard,
-    TouchableHighlight,
-    FlatList,
-    Modal,
-    BackHandler,
-    Alert, StatusBar
+    StatusBar
 } from 'react-native';
 
 
 import styles from "./Estilo";
 import store from 'react-native-simple-store';
-import Plugin from '../../model/plugins';
-import Crud from '../../model/Crud';
-import estilomodal from '../../model/estiloModal';
+import Plugin from '../../controller/plugins';
+import Crud from '../../controller/Crud';
+import estilomodal from '../../controller/estiloModal';
 
 
 const NovaLoja = ({ navigation, routes }) => {

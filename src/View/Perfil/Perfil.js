@@ -31,11 +31,11 @@ import IconE from 'react-native-vector-icons/Entypo';
 
 import RNPickerSelect from 'react-native-picker-select';
 import styles from "./Estilo";
-import { au as sair } from '../../model/Config';
+import { au as sair } from '../../controller/Config';
 import store from 'react-native-simple-store';
-import Plugin from '../../model/plugins';
-import Crud from '../../model/Crud';
-import estilomodal from '../../model/estiloModal';
+import Plugin from '../../controller/plugins';
+import Crud from '../../controller/Crud';
+import estilomodal from '../../controller/estiloModal';
 
 
 const Perfil = ({ navigation }) => {

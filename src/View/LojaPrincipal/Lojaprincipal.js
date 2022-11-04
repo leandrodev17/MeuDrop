@@ -31,9 +31,9 @@ import NetInfo from "@react-native-community/netinfo";
 import RNPickerSelect from 'react-native-picker-select';
 import styles from "./Estilo";
 import store from 'react-native-simple-store';
-import Plugin from '../../model/plugins';
-import Crud from '../../model/Crud';
-import estilomodal from '../../model/estiloModal';
+import Plugin from '../../controller/plugins';
+import Crud from '../../controller/Crud';
+import estilomodal from '../../controller/estiloModal';
 
 
 const lojaprincipal = ({ navigation, route }) => {

@@ -32,10 +32,10 @@ import {Picker} from '@react-native-picker/picker';
 import store from 'react-native-simple-store';
 import CurrencyInput from 'react-native-currency-input';
 import styles from "./Estilo";
-import estilomodal from '../../model/estiloModal';
-import AbrirLink from '../../model/AbrirLink';
-import Crud from '../../model/Crud';
-import Plugin from '../../model/plugins';
+import estilomodal from '../../controller/estiloModal';
+import AbrirLink from '../../controller/AbrirLink';
+import Crud from '../../controller/Crud';
+import Plugin from '../../controller/plugins';
 
 import {
     AdMobBanner,

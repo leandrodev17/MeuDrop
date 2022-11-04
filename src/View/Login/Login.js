@@ -15,11 +15,11 @@ import {
 
 import IconA from 'react-native-vector-icons/AntDesign';
 
-import estilomodal from '../../model/estiloModal';
+import estilomodal from '../../controller/estiloModal';
 import styles from "./Estilo";
-import Plugin from '../../model/plugins';
+import Plugin from '../../controller/plugins';
 import store from 'react-native-simple-store';
-import { au as autenticar } from '../../model/Config';
+import { au as autenticar } from '../../controller/Config';
 
 const Login = ({ navigation }) => {
     const [emailRecuperacao, setRecuperacao] = useState('');

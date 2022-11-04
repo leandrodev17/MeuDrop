@@ -17,9 +17,9 @@ import {
 } from 'react-native';
 
 import styles from "./Estilo";
-import Plugin from '../../model/plugins';
+import Plugin from '../../controller/plugins';
 import store from 'react-native-simple-store';
-import { db, au as autenticar } from '../../model/Config';
+import { db, au as autenticar } from '../../controller/Config';
 
 
 const Cadastro = ({ navigation }) => {

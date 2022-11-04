@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from 'react';
 import { NavigationContainer, StackActions } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import { au as autenticar } from '../model/Config';
+import { au as autenticar } from '../controller/Config';
 import NetInfo from "@react-native-community/netinfo";
 import Icon from 'react-native-vector-icons/Feather';
 import {
@@ -17,11 +17,11 @@ import {
 } from 'react-native';
 
 //screens
-import cadastro from '../View/Cadastro/Cadastro'
-import NovaLoja from '../View/NovaLoja/Novaloja'
-import lojaPrincipal from '../View/LojaPrincipal/Lojaprincipal'
-import taxas from '../View/Configuracao(taxas)/Configuracao'
-import Login from '../View/Login/Login'
+import cadastro from './Cadastro/Cadastro'
+import NovaLoja from './NovaLoja/Novaloja'
+import lojaPrincipal from './LojaPrincipal/Lojaprincipal'
+import taxas from './Configuracao(taxas)/Configuracao'
+import Login from './Login/Login'
 import tab from './barra'
 
 const TabIcon = ({ focused, iconName, title }) => {
